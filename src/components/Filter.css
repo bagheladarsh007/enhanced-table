@@ -1,0 +1,222 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set full-screen height */
+html, body {
+    height: 100%;
+}
+
+/* Filter container */
+.filter-container {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.filter-container div{
+    width: 100%;
+}
+
+
+
+/* Filter input */
+.input {
+    width: 100%;
+    max-width: 300px; /* Adjust based on your design */
+    height: 30px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Table container */
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.column-label-option-container{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+
+}
+
+/* Columns dropdown button */
+.col {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.dropdown label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Responsive table */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table th,
+.responsive-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    margin-right: 5px;
+    padding: 10px;
+}
+
+/* Style the table headers */
+th {
+    background-color:white;
+    /* Change to a light gray */
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #712323;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+    background-color: #1183a3;
+    /* Change to a lighter gray */
+    cursor: pointer;
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+    background-color:white;
+    /* Change to a lightest gray */
+}
+
+/* Basic styling for the table */
+.table-outer-container{
+    width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Highlight on hover */
+tr:hover {
+    background-color:gray;
+}
+
+/* Pagination styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Column visibility dropdown styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content label {
+    display: block;
+    margin: 5px 10px;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hide dropdown icon */
+.dropdown-icon {
+    display: none;
+}
+.page-item-number-changer-container, .page-number-changer-cotainer{
+    display:flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+/* Toggle visibility for smaller screens */
+@media screen and (max-width: 768px) {
+    .filter-container{
+        width: 100%;
+        padding: 1.2rem;
+        padding: 2rem 0;
+    }
+    .column-label-option-container{
+        gap: 1.4rem;
+    }
+    th:last-child,
+    td:last-child {
+        display: none;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        position: relative;
+        display: none;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .dropdown-content label {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+}
